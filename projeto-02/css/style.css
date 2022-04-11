@@ -14,7 +14,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 header {
-  padding: 10px 2% 40px 2%;
+  padding: 10px 2% 25px 2%;
   background: rgb(180, 180, 180);
 }
 
@@ -51,25 +51,24 @@ header {
 
 .cover-form {
   width: 100%;
-  padding: 0 2%;
 }
 
 .bg {
-  height: 500px;
+  position: relative;
+  height: 560px;
   background-size: cover;
   background-position: center;
   background-image: url('../imagens/bg-form.jpg');
 }
 
 .form-container {
-  float: right;
-  margin-right: 40px;
+  position: absolute; 
   width: 400px;
-  height: 110%;
-  position: relative;
+  height: 105%;
+  right: 30px;
+  top: -2.5%;
   z-index: 2;
-  top: -5%;
-  box-shadow: 1px 1px 2px 0px rgb(180, 180, 180);
+  box-shadow: 2px 2px 5px 0px rgba(117, 117, 117, 1);
   background-color: white;
 }
 
@@ -83,7 +82,7 @@ header {
 }
 
 .form-container form {
-  margin-top: 8px;
+  margin-top: 20px;
   padding: 15px;
 }
 
@@ -120,38 +119,113 @@ header {
   border: 0;
 }
 
+.icone-seta{
+	position: absolute;
+	left: 50%;
+	top: -32px;
+	transform:translateX(-50%);
+	width: 64px;
+	height: 64px;
+	background-size: 100% 100%;
+	background-image: url('../imagens/arrow.png');
+}
+
 .chamada {
   width: 100%;
-  position: relative;
-  top: -50px;
   z-index: 1;
   text-align: center;
-  display: inline-block;
+  position: relative;
 }
 
 .chamada .container {
-  padding: 50px 0;
-  background-color: #ccc;
+  padding: 70px 0 50px 0;
+  background-color: #29526d;
 }
 
 .chamada h2 {
-  width: 96%;
+  width: 98%;
   max-width: 700px;
   display: inline-block;
   color: white;
   font-size: 24px;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
+.chamada p {
+  width: 98%;
+	max-width: 700px;
+	display: inline-block;
+	color: white;
+	margin-top:10px;
+	font-size: 18px;
+	font-weight: normal;
+}
 
+.flex-mosaico {
+  display: flex;
+}
 
+.item-1-mosaico {
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+}
 
+.item-2-mosaico {
+  background-color: #4683AB;
+  padding: 90px 40px;
+  width: 40%;
+}
 
+.item-2-mosaico p {
+  color: white;
+}
 
+footer .container {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgb(220, 220, 220);
+}
 
+footer img {
+  width: 130px;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg {
+    height: auto;
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .form-container {
+    text-align: left;
+    height: auto;
+    width: 96%;
+    max-width: 400px;
+    position: static;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 768px){
+	.flex-mosaico{
+		display: block;
+	}
+
+	.item-1-mosaico{
+		padding-top:80%;
+		width: 100%;
+	}
+
+	.item-2-mosaico{
+		text-align: justify;
+		width: 100%;
+	}
+}
 
 @media screen and (max-width: 510px) {
-
   header {
     text-align: center;
   }
