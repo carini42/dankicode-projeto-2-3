@@ -35,6 +35,10 @@ header nav {
   float: right;
 }
 
+nav.mobile-menu {
+  display: none;
+}
+
 header .logo {
   float: left;
   width: 160px;
@@ -42,16 +46,16 @@ header .logo {
   background-color: #ccc;
 }
 
-header nav ul {
+header nav.desktop-menu ul {
   list-style-type: none;
 }
 
-header nav li {
+header nav.desktop-menu li {
   float: left;
   padding: 0 20px;
 }
 
-header nav a {
+header nav.desktop-menu a {
   color: white;
   text-decoration: none;
 }
@@ -78,6 +82,7 @@ section.sessao-01 {
   width: 100%;
   background-color: #472562;
   padding: 0 2%;
+  height: 400px;
 }
 
 section.sessao-01 .container {
@@ -87,35 +92,42 @@ section.sessao-01 .container {
 .texto-sessao-01 {
   float: left;
   width: 50%;
+  position: relative;
+  left: 55px;
   color: white;
+  margin-top: 40px;
+  padding-left: 60px;
 }
 
 .texto-sessao-01 h2 {
+  font-size: 26px;
   font-weight: 300;
 }
 
 .texto-sessao-01 p {
   margin-top: 20px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .texto-sessao-01 ul {
-  font-size: 13px;
+  font-size: 15px;
   list-style-position: inside;
 }
 
 .texto-sessao-01 ul li {
   float: left;
   width: 100%;
+  margin-top: 8px;
 }
 
 .btn-01-texto {
   background-color: #ff703d;
   width: 165px;
   height: 44px;
+  margin-top: 30px;
+  font-size: 13px;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
   text-align: center;
   line-height: 44px;
   border-radius: 30px;
@@ -124,9 +136,74 @@ section.sessao-01 .container {
 .device-sessao-01 {
   float: left;
   width: 50%;
-  height: 300px;
+  height: 430px;
+  top: -30px;
+  position: relative;
   background-image: url('../imagens/device.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
+@media screen and (max-width: 768px) {
+
+  header {
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    padding: 40px 2%;
+  }
+
+  nav.desktop-menu {
+    display: none;
+  }
+
+  nav.mobile-menu {
+    display: block;
+  }
+
+  .chamada-01 {
+    max-width: none;
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin: 100px 0;
+  }
+
+  .chamada-01 h2 {
+    font-size: 30px;
+    padding: 0;
+  }
+
+  section.sessao-01 {
+    padding: 40px 2%;
+    height: auto;
+    text-align: center;
+  }
+
+  .texto-sessao-01 {
+    width: 100%;
+    margin-top: 0;
+    padding-left: 0;
+    position: static;
+    float: none;
+    display: inline-block;
+  }
+
+  .texto-sessao-01 ul {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .texto-sessao-01 ul li {
+    float: none;
+    text-align: left;
+  }
+
+  .btn-01-texto {
+    display: inline-block;
+  }
+
+  .device-sessao-01 {
+    display: none;
+  }
+}
