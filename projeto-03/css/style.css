@@ -77,10 +77,16 @@ nav.mobile-menu ul li a {
 }
 
 header .logo {
+  position: relative;
+  top: -5px;
   float: left;
   width: 160px;
   height: 40px;
-  background-color: #ccc;
+  background-image: url('../imagens/logo-danki.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 header nav.desktop-menu ul {
@@ -281,10 +287,10 @@ section.sessao-01 .container {
   float: left;
   width: 40px;
   height: 40px;
-  position: relative;
-  top: -4px;
+  background-image: url('../imagens/autor.png');
+  background-size: 100% 100%;
+  background-color: transparent;
   border-radius: 20px;
-  background-color: gray;
 }
 
 .texto-autor {
@@ -410,6 +416,23 @@ section.sessao-04 {
   background: white;
   border: 5px solid rgb(200, 200, 200);
 }
+
+footer {
+  padding: 40px 2%;
+  background: #192123;
+  color: white;
+}
+
+footer p:nth-of-type(1) {
+  float: left;
+  font-size: 14px;
+}
+
+footer p:nth-of-type(2) {
+  float: right;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 830px) {
 
   .chamada-01 {
@@ -547,4 +570,17 @@ section.sessao-04 {
 		top: 16px;
 		margin-top: 20px;
 	}
+
+  footer {
+    text-align: center;
+  }
+
+  footer p:nth-of-type(1) {
+    float: none;
+  }
+
+  footer p:nth-of-type(2) {
+    float: none;
+    margin-top: 8px;
+  }
 }
